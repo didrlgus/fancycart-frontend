@@ -36,22 +36,22 @@
 
 <script>
 import OrderItem from './OrderItem';
-import firebase from '../../plugins/firebase';
+// import firebase from '../../plugins/firebase';
 
 export default {
     components: {
         OrderItem
     },
-    props: ['data'], 
+    props: ['data'],
     methods: {
         deleteDoc(id){
-            const db = firebase.firestore();
-            const deleteDoc = db.collection('orders').doc(id);
-            deleteDoc.delete();
-            this.$toast.warning(`Deleted`, {
-                icon: 'fas fa-trash'
-            });
-            setTimeout(() => {window.location.reload(true)}, 1500)
+            // const db = firebase.firestore();
+            // const deleteDoc = db.collection('orders').doc(id);
+            // deleteDoc.delete();
+            // this.$toast.warning(`Deleted`, {
+            //     icon: 'fas fa-trash'
+            // });
+            // setTimeout(() => {window.location.reload(true)}, 1500)
         }
     }
 }

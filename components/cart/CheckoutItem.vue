@@ -92,7 +92,7 @@
                                                     <span class="subtotal-amount">${{cart.price * cart.quantity}}</span>
                                                 </td>
                                             </tr>
-                                            
+
                                             <tr>
                                                 <td class="order-subtotal">
                                                     <span>Cart Subtotal</span>
@@ -153,12 +153,12 @@
 </template>
 
 <script>
-import firebase from '../../plugins/firebase';
+// import firebase from '../../plugins/firebase';
 export default {
     data(){
         return{
             personDetails: {
-                fullName: 'John Doe', 
+                fullName: 'John Doe',
                 address: 'Town hall, av 02',
                 city: 'New York',
                 email: 'john@gmail.com',
@@ -174,21 +174,21 @@ export default {
         cartTotal(){
             return this.$store.getters.totalAmount
         }
-    }, 
+    },
     methods: {
         add(){
-            const cartData = {
-                details: this.personDetails,
-                items: this.cart
-            }
-            const db = firebase.firestore();
-            const dbOrderRef = db.collection('orders');
-            dbOrderRef.add(cartData);
-            this.$toast.success(`Thanks for the order`, {
-                icon: 'fas fa-cart-plus'
-            });
-            this.$store.dispatch('cartEmpty')
-            this.$router.push("/");
+            // const cartData = {
+            //     details: this.personDetails,
+            //     items: this.cart
+            // }
+            // const db = firebase.firestore();
+            // const dbOrderRef = db.collection('orders');
+            // dbOrderRef.add(cartData);
+            // this.$toast.success(`Thanks for the order`, {
+            //     icon: 'fas fa-cart-plus'
+            // });
+            // this.$store.dispatch('cartEmpty')
+            // this.$router.push("/");
         }
     }
 }

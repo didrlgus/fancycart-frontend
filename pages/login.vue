@@ -21,15 +21,16 @@
                             <form class="login-form">
                                 <div class="form-group">
                                     <label>이메일</label>
-                                    <input type="email" class="form-control" placeholder="Enter your name" id="name" name="name">
+                                    <input type="email" class="form-control" placeholder="Enter your name" id="name" name="name" v-model="email">
                                 </div>
 
                                 <div class="form-group">
                                     <label>비밀번호</label>
-                                    <input type="password" class="form-control" placeholder="Enter your password" id="password" name="password">
+                                    <input type="password" class="form-control" placeholder="Enter your password" id="password" name="password" v-model="password">
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">로그인 하기</button>
+                              <button  class="btn" :class="{'btn-success': !invalidForm}" type="submit"
+                                       :disabled="invalidForm">로그인</button>
 
 <!--                                <nuxt-link to="/" class="forgot-password">Lost your password?</nuxt-link>-->
                             </form>
@@ -52,3 +53,42 @@
         </section>
     </div>
 </template>
+<script>
+  import {mapActions} from 'vuex'
+
+  export default {
+    data () {
+      return {
+        email: '',
+        password: '',
+        error: '',
+        rPath: ''
+      }
+    },
+    computed: {
+      invalidForm () {
+        return !this.email || !this.password
+      }
+    },
+    created () {
+      this.rPath = this.$route.query.rPath || '/'
+    },
+    methods: {
+      ...mapActions([
+        'LOGIN'
+      ]),
+      onSubmit () {
+        this.LOGIN({
+          email: this.email,
+          password: this.password
+        })
+          .then(data => {
+            this.$router.push(this.rPath)
+          })
+          .catch(err => {
+            // this.error = err.data.error
+          })
+      }
+    }
+  }
+</script>

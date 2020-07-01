@@ -22,7 +22,7 @@
     <!-- End Subscribe Area -->
 </template>
 <script>
-import firebase from '../../plugins/firebase';
+// import firebase from '../../plugins/firebase';
 export default {
     data(){
         return{
@@ -34,21 +34,21 @@ export default {
     },
     methods: {
         subscribe(){
-            if(this.subscriptions.email != '' && this.validateEmail(this.subscriptions.email)){
-                const db = firebase.firestore();
-                const dbOrderRef = db.collection('subscriptions');
-                dbOrderRef.add(this.subscriptions);
-                this.$toast.success(`Thanks for your subscriptions`, {
-                    icon: 'fas fa-user-check'
-                });
-                this.subscriptions.email = ''
-            } else {
-                this.$toast.error(`Please fillup with a valid email`, {
-                    icon: 'fas fa-times'
-                });
-            }
+            // if(this.subscriptions.email != '' && this.validateEmail(this.subscriptions.email)){
+            //     const db = firebase.firestore();
+            //     const dbOrderRef = db.collection('subscriptions');
+            //     dbOrderRef.add(this.subscriptions);
+            //     this.$toast.success(`Thanks for your subscriptions`, {
+            //         icon: 'fas fa-user-check'
+            //     });
+            //     this.subscriptions.email = ''
+            // } else {
+            //     this.$toast.error(`Please fillup with a valid email`, {
+            //         icon: 'fas fa-times'
+            //     });
+            // }
         },
-        validateEmail(email) 
+        validateEmail(email)
         {
             if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
             {

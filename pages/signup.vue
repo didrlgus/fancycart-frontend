@@ -34,24 +34,23 @@
 
                         <div class="form-group">
                           <b-form-group label="메일 수신 여부">
-                            <b-form-radio-group
-                              v-model="selected"
-                              :options="options"
-                              name="radio-inline" />
+                            <b-form-radio v-model="selected" name="some-radios" value="true">Yes</b-form-radio>
+                            <b-form-radio v-model="selected" name="some-radios" value="false">No</b-form-radio>
                           </b-form-group>
                         </div>
 
+
                         <div class="row">
                           <div class="form-group col-md-6">
-                            <label>도로명 주소</label>
-                            <input name="roadAddr" class="form-control" type="text" v-model="roadAddr"/>
+                            <label>*도로명 주소</label>
+                            <input name="roadAddr" class="form-control" type="text" v-model="roadAddr" disabled/>
                           </div>
                           <div class="form-group col-md-6">
-                            <label>건물이름</label>
-                            <input name="buildingName" class="form-control" type="text" v-model="buildingName"/>
+                            <label>*건물이름</label>
+                            <input name="buildingName" class="form-control" type="text" v-model="buildingName" disabled/>
                           </div>
                           <div class="form-group col-md-6">
-                            <label>상세주소</label>
+                            <label>*상세주소</label>
                             <input name="detailAddr" class="form-control" type="text" placeholder="상세주소를 입력하세요." v-model="detailAddr"/>
                           </div>
                         </div>
@@ -73,6 +72,7 @@
 </template>
 <script>
   import DaumPostcode from 'vuejs-daum-postcode'
+  import {mapActions} from 'vuex'
 
   export default {
     components: {
@@ -80,10 +80,10 @@
     },
     data() {
       return {
-        selected: 'first',
+        selected: '',
         options: [
-          { text: 'Yes', value: 'Y' },
-          { text: 'No', value: 'N' }
+          { text: 'Yes', value: true },
+          { text: 'No', value: false }
         ],
         name: '',
         email: '',
@@ -103,6 +103,9 @@
       }
     },
     methods: {
+      ...mapActions([
+        'ADD_USER'
+      ]),
       handleAddress(data) {
         let fullAddress = data.address
         let extraAddress = ''
@@ -124,13 +127,20 @@
         this.isDaumPostcode = true
       },
       onSubmit() {
-        console.log(this.name)
-        console.log(this.email)
-        console.log(this.password)
-        console.log(this.selected)
-        console.log(this.roadAddr)
-        console.log(this.buildingName)
-        console.log(this.detailAddr)
+        this.ADD_USER({name: this.name, email: this.email, password: this.password, agreeMessageByEmail: this.selected,
+          roadAddr: this.roadAddr, buildingName: this.buildingName, detailAddr: this.detailAddr})
+          .then(_ => {
+            this.$router.push("/");
+            this.$toast.success(`회원가입에 성공하였습니다.`, { icon: 'fas fa-trash'})
+          })
+          .catch(err => {
+            let field = err.data.errors ? err.data.errors[0].field : null
+            if (field) {
+              this.$toast.error(field + " 을/를 올바르게 입력하세요.", { icon: 'fas fa-trash' })
+            } else {
+              this.$toast.error(err.data, { icon: 'fas fa-trash' })
+            }
+          })
       }
     }
   }

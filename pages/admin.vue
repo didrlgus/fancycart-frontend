@@ -33,7 +33,6 @@
 import Loader from '../components/common/Loader';
 import OrderPerson from '../components/admin/OrderPerson';
 import Sidebar from '../components/admin/Sidebar';
-import firebase from '../plugins/firebase';
 export default {
     layout: 'admin',
     components: {

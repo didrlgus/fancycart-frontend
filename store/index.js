@@ -1,4 +1,5 @@
-// import axios from '@nuxtjs/axios';
+import * as api from "../api";
+
 const state = () => ( {
     cart: [],
     totalAmount: 0,
@@ -21,6 +22,13 @@ export const totals = (paylodArr) => {
     }
 };
 const mutations = {
+    LOGIN (state, token) {
+      if(!token) return
+      state.token = token
+      localStorage.setItem('token', token)
+      api.setAuthInHeader(token)
+    },
+
     'GET_ORDER'(state, payload){
         state.orders = payload
     },
@@ -49,7 +57,7 @@ const mutations = {
 
         state.totalAmount = totals(payload).amount
         state.totalQuantity = totals(payload).qty
-    }, 
+    },
     'CART_EMPTY'(state){
         state.cart = []
         state.totalAmount = 0
@@ -66,6 +74,17 @@ const actions = {
     //         commit('GET_ORDER', res.data)
     //     })
     // },
+    ADD_USER({ dispatch, state }, { name, email, password, agreeMessageByEmail, roadAddr, buildingName, detailAddr }) {
+      return api.user.create(name, email, password, agreeMessageByEmail, roadAddr, buildingName, detailAddr)
+        .then(data => {
+
+        })
+    },
+
+    LOGIN ({ commit }, { email, password }) {
+      return api.auth.login(email, password)
+        .then(({ accessToken }) => commit('LOGIN', accessToken))
+    },
 
     addToCart({ commit }, payload){
         commit('ADD_TO_CART', payload)
@@ -91,7 +110,7 @@ const actions = {
 
         const cartUpdate = [...currentCartToUpdate.slice(0, indexToUpdate), newCart, ...currentCartToUpdate.slice(indexToUpdate + 1)]
         commit('UPDATE_CART', cartUpdate)
-    }, 
+    },
     cartEmpty({commit}){
         commit('CART_EMPTY')
     }

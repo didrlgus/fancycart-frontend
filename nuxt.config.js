@@ -1,4 +1,3 @@
-
 export default {
   mode: 'universal',
   /*
@@ -61,13 +60,16 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    proxy: true
+    proxy: true,
+    baseURL: process.env.BASE_URL || 'http://localhost:8080'
   },
   /*
   ** Globally configure <nuxt-link> default active class.
   */
   router: {
-    linkActiveClass: 'active'
+    linkActiveClass: 'active',
+    routes: [
+    ]
   },
   /*
   ** Build configuration
