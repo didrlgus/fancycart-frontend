@@ -44,6 +44,7 @@ export default {
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/auth'
   ],
   /*
   /*
@@ -60,8 +61,22 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    proxy: true,
-    baseURL: process.env.BASE_URL || 'http://localhost:8080'
+    baseURL: 'http://localhost:8080'
+  },
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: { url: '/api/v1/authentication', method: 'post', propertyName: 'token' },
+          logout: { url: '/api/v1/logout', method: 'delete' },
+          user: { url: '/api/v1/user', method: 'get', propertyName: 'email' }
+        },
+        // tokenRequired: true,
+        tokenType: 'Bearer ',
+        // globalToken: true,
+        // autoFetchUser: true
+      }
+    }
   },
   /*
   ** Globally configure <nuxt-link> default active class.

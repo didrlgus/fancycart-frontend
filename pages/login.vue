@@ -18,19 +18,18 @@
                                 <h2><span class="dot"></span> 로그인</h2>
                             </div>
 
-                            <form class="login-form">
+                            <form @submit.prevent="onSubmit" class="login-form">
                                 <div class="form-group">
                                     <label>이메일</label>
-                                    <input type="email" class="form-control" placeholder="Enter your name" id="name" name="name" v-model="email">
+                                    <input type="email" class="form-control" placeholder="Enter your name" id="name" name="name" v-model="login.email">
                                 </div>
 
                                 <div class="form-group">
                                     <label>비밀번호</label>
-                                    <input type="password" class="form-control" placeholder="Enter your password" id="password" name="password" v-model="password">
+                                    <input type="password" class="form-control" placeholder="Enter your password" id="password" name="password" v-model="login.password">
                                 </div>
 
-                              <button  class="btn" :class="{'btn-success': !invalidForm}" type="submit"
-                                       :disabled="invalidForm">로그인</button>
+                              <button  class="btn" :class="{'btn-success': !invalidForm}" type="submit" :disabled="invalidForm">로그인</button>
 
 <!--                                <nuxt-link to="/" class="forgot-password">Lost your password?</nuxt-link>-->
                             </form>
@@ -59,15 +58,17 @@
   export default {
     data () {
       return {
-        email: '',
-        password: '',
+        login: {
+          email: '',
+          password: ''
+        },
         error: '',
         rPath: ''
       }
     },
     computed: {
       invalidForm () {
-        return !this.email || !this.password
+        return !this.login.email || !this.login.password
       }
     },
     created () {
@@ -77,17 +78,16 @@
       ...mapActions([
         'LOGIN'
       ]),
-      onSubmit () {
-        this.LOGIN({
-          email: this.email,
-          password: this.password
-        })
-          .then(data => {
-            this.$router.push(this.rPath)
+      async onSubmit () {
+        try {
+          let response = await this.$auth.loginWith('local', {
+            data: this.login
           })
-          .catch(err => {
-            // this.error = err.data.error
-          })
+          this.$router.push('/');
+          this.$toast.success(this.$auth.user + "님 어서오세요!")
+        } catch (err) {
+          this.$toast.error('아이디 또는 비밀번호가 적절하지 않습니다.', { icon: 'fas fa-trash' })
+        }
       }
     }
   }

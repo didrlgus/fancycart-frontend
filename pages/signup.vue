@@ -39,7 +39,6 @@
                           </b-form-group>
                         </div>
 
-
                         <div class="row">
                           <div class="form-group col-md-6">
                             <label>*도로명 주소</label>
@@ -61,7 +60,7 @@
                         </div>
                         <DaumPostcode v-if="isDaumPostcode" :on-complete=handleAddress />
 
-                        <button :class="{'btn-success': !invalidForm}" :disabled="invalidForm" type="submit" class="btn btn-primary">회원가입 하기</button>
+                        <button class="btn btn-primary" :class="{'btn-success': !invalidForm}" :disabled="invalidForm" type="submit">회원가입 하기</button>
 
                         <nuxt-link to="/" class="return-store">홈으로</nuxt-link>
                     </form>
@@ -131,14 +130,16 @@
           roadAddr: this.roadAddr, buildingName: this.buildingName, detailAddr: this.detailAddr})
           .then(_ => {
             this.$router.push("/");
-            this.$toast.success(`회원가입에 성공하였습니다.`, { icon: 'fas fa-trash'})
+            this.$toast.success(`회원가입에 성공하였습니다.`)
           })
           .catch(err => {
-            let field = err.data.errors ? err.data.errors[0].field : null
+            let field = err.data.errors[0].field ? err.data.errors[0].field : null
             if (field) {
-              this.$toast.error(field + " 을/를 올바르게 입력하세요.", { icon: 'fas fa-trash' })
+              this.$toast.error(err.data.message, { icon: 'fas fa-trash' })
+              this.$el.querySelector(`input[name=${field}]`).focus()
             } else {
-              this.$toast.error(err.data, { icon: 'fas fa-trash' })
+              this.$toast.error(err.data.message, { icon: 'fas fa-trash' })
+              this.$el.querySelector('input[name=email]').focus()
             }
           })
       }

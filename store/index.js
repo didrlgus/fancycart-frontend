@@ -4,7 +4,7 @@ const state = () => ( {
     cart: [],
     totalAmount: 0,
     totalQuantity: 0,
-    orders: []
+    orders: [],
 });
 
 export const totals = (paylodArr) => {
@@ -22,13 +22,6 @@ export const totals = (paylodArr) => {
     }
 };
 const mutations = {
-    LOGIN (state, token) {
-      if(!token) return
-      state.token = token
-      localStorage.setItem('token', token)
-      api.setAuthInHeader(token)
-    },
-
     'GET_ORDER'(state, payload){
         state.orders = payload
     },
@@ -77,13 +70,7 @@ const actions = {
     ADD_USER({ dispatch, state }, { name, email, password, agreeMessageByEmail, roadAddr, buildingName, detailAddr }) {
       return api.user.create(name, email, password, agreeMessageByEmail, roadAddr, buildingName, detailAddr)
         .then(data => {
-
         })
-    },
-
-    LOGIN ({ commit }, { email, password }) {
-      return api.auth.login(email, password)
-        .then(({ accessToken }) => commit('LOGIN', accessToken))
     },
 
     addToCart({ commit }, payload){

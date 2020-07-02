@@ -46,7 +46,7 @@
 <!--                                    <nuxt-link to="/login">Login</nuxt-link>-->
 <!--                                </div>-->
                                 <div class="option-item">
-                                    <a @click.prevent="toggle" href="#">
+                                    <a v-if="$auth.loggedIn" @click.prevent="toggle" href="#">
                                         Cart({{cart.length}}) <i class="fas fa-shopping-bag"></i>
                                     </a>
                                 </div>
