@@ -1,7 +1,3 @@
-/**
-* VueShop Store
-*/
-
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -13,7 +9,7 @@ import payment from './modules/payment';
 import blog from './modules/blog';
 import productDetail from './modules/productDetail';
 import user from './modules/user';
-import state from './state'
+import createPersistedState from 'vuex-persistedstate'
 
 Vue.use(Vuex);
 
@@ -27,8 +23,13 @@ export const store = new Vuex.Store({
         productDetail,
         user
     },
-    state
+    plugins: [
+      createPersistedState({
+        paths: ['user']
+      })
+    ]
 })
 
 const { token } = localStorage
 store.commit('LOGIN', token)
+

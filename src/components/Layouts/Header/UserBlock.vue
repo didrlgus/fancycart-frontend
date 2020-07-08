@@ -39,8 +39,7 @@
         ]),
         logout() {
           this.LOGOUT()
-          //this.$router.push('/session/signin')
-          location.href = "/session/signin"
+          this.$router.push('/session/signin')
         }
       }
 	}

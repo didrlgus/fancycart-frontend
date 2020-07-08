@@ -4,15 +4,6 @@
 			<div class="bg-white final-receipt-page section-gap">
 				<div class="account-info">
 					<div class="container grid-list-xl">
-						<div class="layout justify-start mt-0 mb-4 mx-0">
-							<div class="login-user-img">
-								<img src="/static/images/user-3.jpg" width="70" alt="Active User">
-							</div>
-							<div class="px-4">
-								<h4>Hi, Alex Doe</h4>
-								<div class="text-muted text-xl">alexdoe@deo.com</div>
-							</div>
-						</div>
 						<v-layout row wrap fill-height profile-list>
 							<v-flex xs12 sm12 md4 lg3 xl2 user-nav-list px-0>
 								<div class="emb-card account-block fill-height py-4">
@@ -52,38 +43,38 @@ export default {
 	data(){
 		return{
 			settings:{
-				orderHistory:[
-					{
-						title:"Order History",
-						icon:"history",
-						path:"/account/order-history",
-						id:"orderHistory"
-					},
-				],
-				profile:[
-					{
-						title:"Profile",
-						icon:"account_circle",
-						path:"/account/profile",
-						id:"profile"
-					},
-				],
-				address:[
-					{
-						title:"Addresses",
-						icon:"location_on",
-						path:"/account/address",
-						id:"addresses"
-					}
-				],
-				cards:[
-					{
-						title:"Saved Cards",
-						icon:"credit_card",
-						path:"/account/cards",
-						id:"cards"
-					},
-				]
+			  profile:[
+			    {
+                  title:"Profile",
+                  icon:"account_circle",
+                  path:"/account/profile",
+                  id:"profile"
+                },
+              ],
+              orderHistory:[
+                {
+                  title:"Order History",
+                  icon:"history",
+                  path:"/account/order-history",
+                  id:"orderHistory"
+                },
+              ],
+              address:[
+                {
+                  title:"Addresses",
+                  icon:"location_on",
+                  path:"/account/address",
+                  id:"addresses"
+                }
+              ],
+              cards:[
+                {
+                  title:"Saved Cards",
+                  icon:"credit_card",
+                  path:"/account/cards",
+                  id:"cards"
+                },
+              ]
 			},
 			selectedTab: 0,
 		}

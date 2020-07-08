@@ -76,8 +76,6 @@
         'isAuth'
       ])
     },
-    watch:{
-    },
     components: {
       embMenu: Menu,
       embCart:Cart,

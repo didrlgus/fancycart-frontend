@@ -73,8 +73,8 @@
           this.$refs.form.validate();
           if(this.valid) {
             this.LOGIN({email: this.email, password: this.password})
-              .then(data => {
-                location.href = this.rPath
+              .then(_ => {
+                this.$router.push(this.rPath)
                 // this.$snotify.success(this.email + '님 어서오세요.',{
                 //   closeOnClick: false,
                 //   pauseOnHover: false,
