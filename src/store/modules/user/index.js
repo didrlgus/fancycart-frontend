@@ -18,6 +18,11 @@ const actions = {
       .then(data => {
         commit('SET_PROFILE', data)
       })
+  },
+  UPDATE_PROFILE( { dispatch, state }, {id, name, birth, agreeMessageByEmail, roadAddr, buildingName, detailAddr}) {
+    return api.user.update(id, name, birth, agreeMessageByEmail, roadAddr, buildingName, detailAddr)
+        .then(data => {
+        })
   }
 }
 

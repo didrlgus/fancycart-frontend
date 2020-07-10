@@ -45,7 +45,7 @@ export default {
 			settings:{
 			  profile:[
 			    {
-                  title:"Profile",
+                  title:"프로필",
                   icon:"account_circle",
                   path:"/account/profile",
                   id:"profile"
@@ -53,23 +53,15 @@ export default {
               ],
               orderHistory:[
                 {
-                  title:"Order History",
+                  title:"주문 내역",
                   icon:"history",
                   path:"/account/order-history",
                   id:"orderHistory"
                 },
               ],
-              address:[
-                {
-                  title:"Addresses",
-                  icon:"location_on",
-                  path:"/account/address",
-                  id:"addresses"
-                }
-              ],
               cards:[
                 {
-                  title:"Saved Cards",
+                  title:"카드 정보",
                   icon:"credit_card",
                   path:"/account/cards",
                   id:"cards"

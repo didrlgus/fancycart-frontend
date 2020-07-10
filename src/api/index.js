@@ -6,7 +6,11 @@ const UNAUTHORIZED = [401,403]
 const API_VERSION = "/api/v1"
 
 const onUnauthorized = () => {
-  router.push(`/session/singup?returnPath=${encodeURIComponent(location.pathname)}`)
+    delete localStorage.token
+    delete localStorage.vuex
+    setAuthInHeader(null)
+    router.go(`/session/signup?returnPath=${encodeURIComponent(location.pathname)}`)
+    debugger
 }
 
 const request = (method, url, data) => {
@@ -17,7 +21,9 @@ const request = (method, url, data) => {
   }).then(result => result.data)
     .catch(result => {
       const {status} = result.response
-      if(status === UNAUTHORIZED[0] || status === UNAUTHORIZED[1]) onUnauthorized()
+      if(status === UNAUTHORIZED[0] || status === UNAUTHORIZED[1]) {
+          onUnauthorized()
+      }
       throw result.response
     })
 }
@@ -27,12 +33,15 @@ export const setAuthInHeader = token => {
 }
 
 export const user = {
-  create(name, email, password) {
-    return request('post', '/user', {name, email, password})
-  },
-  fetch(uId) {
-    return request('get', `/user/${uId}`)
-  }
+    create(name, email, password) {
+        return request('post', '/user', {name, email, password})
+    },
+    fetch(uId) {
+        return request('get', `/user/${uId}`)
+    },
+    update(uId, name, birth, agreeMessageByEmail, roadAddr, buildingName, detailAddr) {
+        return request('put', `/user/${uId}`, {name, birth, agreeMessageByEmail, roadAddr, buildingName, detailAddr})
+    }
 }
 
 export const auth = {

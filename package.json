@@ -15,6 +15,7 @@
 		"test:e2e": "vue-cli-service test:e2e"
 	},
 	"dependencies": {
+		"@lossendae/vue-avatar": "^0.1.5",
 		"algoliasearch": "^4.2.0",
 		"axios": "^0.19.0",
 		"babel-polyfill": "^6.26.0",
@@ -30,8 +31,10 @@
 		"slick-carousel": "^1.8.1",
 		"vue": "^2.6.10",
 		"vue-chartjs": "^3.4.2",
+		"vue-daum-postcode": "^0.9.0",
 		"vue-i18n": "^8.17.5",
 		"vue-instantsearch": "^2.4.0",
+		"vue-js-modal": "^2.0.0-rc.5",
 		"vue-moment": "^4.0.0",
 		"vue-nprogress": "^0.1.5",
 		"vue-perfect-scrollbar": "^0.2.0",

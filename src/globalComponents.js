@@ -2,8 +2,6 @@
  * VueShop Global Components
  */
 import HeaderV1 from './components/Layouts/Header/HeaderV1.vue';
-import HeaderV2 from './components/Layouts/Header/HeaderV2.vue';
-import HeaderV3 from './components/Layouts/Header/HeaderV3.vue';
 import FixedHeader from './components/Layouts/Header/FixedHeader.vue';
 import FooterV1 from './components/Layouts/Footer/FooterV1.vue';
 import SocialShare from './components/Global/SocialShare';
@@ -18,7 +16,8 @@ import Timer from './components/Global/Timer';
 import AppCard from 'Components/AppCard/AppCard';
 import DeleteConfirmationDialog2 from './components/Global/DeleteConfirmationDialog2';
 import VuePerfectScrollbar from 'vue-perfect-scrollbar';
-
+import VueAvatar from '@lossendae/vue-avatar'
+import { VueDaumPostcode } from "vue-daum-postcode"
 
 const GlobalComponents = {
    install(Vue) {
@@ -37,6 +36,8 @@ const GlobalComponents = {
       Vue.component('appCard', AppCard);
       Vue.component('embDeleteConfirmation2', DeleteConfirmationDialog2);
       Vue.component('embPerfectScrollbar', VuePerfectScrollbar);
+       Vue.component('vue-avatar', VueAvatar)
+       Vue.component('VueDaumPostcode', VueDaumPostcode)
    }
 }
 

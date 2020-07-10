@@ -29,12 +29,12 @@
 
   export default {
     components: {
-      embHomeMainBannerV3: HomeMainBannerV3,
-      featureV2: FeatureV2,
-      collectionGallery:CollectionGallery,
-      ShopByCategory:ShopByCategory,
-      embFeatureProductV2: FeatureProductV2,
-      Banner: Banner
+        embHomeMainBannerV3: HomeMainBannerV3,
+        featureV2: FeatureV2,
+        collectionGallery:CollectionGallery,
+        ShopByCategory:ShopByCategory,
+        embFeatureProductV2: FeatureProductV2,
+        Banner: Banner,
     },
     data() {
       return {

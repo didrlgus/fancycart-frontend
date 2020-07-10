@@ -2,64 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f86b3678-8737-4b40-80ad-4827f84a5db7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/modules/user/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/assert/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/braces/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cacache/lib/content/read.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cacache/lib/content/rm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cacache/lib/entry-index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cacache/lib/util/move-file.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/commander/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/commander/Readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/commander/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/commander/typings/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fill-range/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/follow-redirects/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/follow-redirects/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ignore/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ignore/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ignore/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ignore/legacy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-fullwidth-code-point/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-fullwidth-code-point/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/load-json-file/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lower-case/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/micromatch/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/micromatch/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/micromatch/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/no-case/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/param-case/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/parse-json/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/parse-json/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/read-pkg-up/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/read-pkg/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/read-pkg/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/readable-stream/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/readable-stream/lib/_stream_duplex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/readable-stream/lib/_stream_readable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/readable-stream/lib/_stream_writable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/readable-stream/lib/internal/streams/destroy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/readable-stream/readable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/semver/bin/semver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ssri/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ssri/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/string-width/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/strip-bom/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/terser-webpack-plugin/dist/minify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/to-regex-range/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/type-fest/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/util/CHANGELOG.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layouts/Header/HeaderV1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layouts/Header/HeaderV1.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Layouts/Header/UserBlock.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layouts/Header/UserBlock.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/globalComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/globalComponents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/modules/user/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/modules/user/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Sessions/SignIn.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Sessions/SignIn.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomeV1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomeV1.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/UserAccount/Account.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserAccount/Account.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserAccount/EditAddress.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserAccount/EditAddress.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserAccount/EditProfileInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserAccount/EditProfileInfo.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/UserAccount/Profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserAccount/Profile.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -144,6 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1593927813202</updated>
       <workItem from="1593927817677" duration="2420000" />
+      <workItem from="1594280157920" duration="25003000" />
     </task>
     <task id="LOCAL-00001" summary="템플릿 변경&#10;- 회원가입&#10;- 로그인">
       <created>1594032079944</created>
@@ -152,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594032079947</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="유저 프로필 조회 구현">
+      <created>1594204493697</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594204493697</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +126,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -171,41 +136,42 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="템플릿 변경&#10;- 회원가입&#10;- 로그인" />
-    <option name="LAST_COMMIT_MESSAGE" value="템플릿 변경&#10;- 회원가입&#10;- 로그인" />
+    <MESSAGE value="유저 프로필 조회 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="유저 프로필 조회 구현" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594200278657">
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594371997631">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1594200278657" />
-    <state x="144" y="0" key="CommitChangelistDialog2" timestamp="1594031739749">
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1594371997631" />
+    <state x="144" y="0" key="CommitChangelistDialog2" timestamp="1594379104635">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="144" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1594031739749" />
-    <state width="1237" height="254" key="GridCell.Tab.0.bottom" timestamp="1594192939857">
+    <state x="144" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1594379104635" />
+    <state width="1237" height="256" key="GridCell.Tab.0.bottom" timestamp="1594375938250">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="254" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594192939857" />
-    <state width="1237" height="254" key="GridCell.Tab.0.center" timestamp="1594192939856">
+    <state width="1237" height="256" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594375938250" />
+    <state width="1237" height="256" key="GridCell.Tab.0.center" timestamp="1594375938250">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="254" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594192939856" />
-    <state width="1237" height="254" key="GridCell.Tab.0.left" timestamp="1594192939856">
+    <state width="1237" height="256" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594375938250" />
+    <state width="1237" height="256" key="GridCell.Tab.0.left" timestamp="1594375938250">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="254" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594192939856" />
-    <state width="1237" height="254" key="GridCell.Tab.0.right" timestamp="1594192939857">
+    <state width="1237" height="256" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594375938250" />
+    <state width="1237" height="256" key="GridCell.Tab.0.right" timestamp="1594375938250">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="254" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594192939857" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1594202819342">
+    <state width="1237" height="256" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594375938250" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1594379001018">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1280.680@0.0.1280.680" timestamp="1594202819342" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1594032094299">
+    <state width="498" height="446" key="SwitcherDM/0.0.1280.680@0.0.1280.680" timestamp="1594379001018" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1594204498749">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1594032094299" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1594204498749" />
     <state x="611" y="176" key="run.anything.popup" timestamp="1594014998037">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

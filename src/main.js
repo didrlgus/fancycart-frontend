@@ -10,6 +10,7 @@ import VueMoment from 'vue-moment'
 import App from './App.vue'
 import { store } from './store/store'
 import AppConfig from 'Constants/AppConfig'
+import VModal from 'vue-js-modal'
 
 // localisation messages
 import messages from './lang'
@@ -42,6 +43,7 @@ Vue.use(VueGoogleMaps, {
 	}
 });
 Vue.use(GlobalComponents)
+Vue.use(VModal, { dynamic: true })
 // router navigation guards
 router.beforeEach((to, from, next) => {
 	Nprogress.start();
